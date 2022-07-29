@@ -1,0 +1,78 @@
+body{
+    background-image: url('https://stepik.org/media/attachments/lesson/374893/world.png');
+    background-size: cover;
+}
+.body__block{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.body__title-text{
+    font-size: 24px;
+    font-family: "Courier New";
+    font-weight: normal;
+    color: white;
+    background: #5d83ff;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.body__grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 5px;
+    border-radius: 15px;
+    font-family: "Monaco";
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.card{
+    background: gray;
+    color: white;
+    padding: 40px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.card__content {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+
+.card__content-back {
+    color: white;
+    display: none;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+    background: slategray;
+}
+
+.card:hover .card__content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 0.5s;
+}
+
+.card:hover .card__content-front{
+    display: none;
+}
+
+.card:hover .card__content-back{
+    display: block;
+}
